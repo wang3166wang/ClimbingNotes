@@ -31,7 +31,7 @@ make
 下面在启动 redis 服务：
 
 ```
-./redis-server
+./redis-server ./usr/local/redis-6.0.8/redis.conf
 ```
 
 ## 6.修改密码
@@ -47,7 +47,7 @@ vim /usr/local/redis-6.0.8/redis.conf
 requirepass Wang19950730
 ```
 
-7.修改后台启动
+## 7.修改后台启动
 
 ```
 vim /usr/local/redis-6.0.8/redis.conf
@@ -57,9 +57,15 @@ vim /usr/local/redis-6.0.8/redis.conf
 daemonize yes
 ```
 
-8.查看进程
+## 8.查看进程
 
 ```
 ps -ef|grep redis
+```
+
+## 9.远程连接不上问题
+
+```
+注释掉bind 127.0.0.1（取消绑定本地地址）
 ```
 
